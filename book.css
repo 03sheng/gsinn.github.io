@@ -1,0 +1,98 @@
+body{
+    font-family: Graphik Regular;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+
+    background-color: none;
+    background-image: url(Images/i19.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.container{
+    background-color: #fafafa;
+    margin: 200px;
+    box-shadow: 10px 15px 20px rgb(0, 0, 0, .1);
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+}
+.container-time{
+    background-color: rgba(59, 59, 59, 0.95);
+    padding: 50px;
+    outline: 2px solid #ffffff;
+    outline-offset: -30px;
+    text-align: center;
+
+}
+.heading{
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.heading-days{
+    color: #01ff91;
+    font-size: 20px;
+}
+.heading-days1{
+    color: #ffffff;
+    font-size: 20px;
+}
+.heading-phone{
+    font-size: 20px;
+}
+.container-form{
+    padding: 20px 0;
+    margin: 0 auto;
+    color: #000;
+}
+form{
+    display: grid;
+    grid-row-gap: 20px;
+}
+form p{
+    font-weight: 600; 
+
+}
+.form-field{
+    display:flex;
+    justify-content: space-between;
+
+}
+input,select{
+    pad: 10px 15px;
+} 
+.btn {
+    background-color: #ffb731;
+    color:#fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    box-shadow: 7px 10px 12px rgb(0, 0, 0, .1);
+    cursor: pointer;
+    transition: all .3;
+    -webkit-transition: all .3;
+    -moz-transition: all .3;
+    -ms-transition: all .3;
+    -o-transition: all .3;
+
+}
+.btn:hover{
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    box-shadow: 10px 12px 15px rgb(255, 249, 249);
+}
+
+a {
+    text-decoration: none;
+}

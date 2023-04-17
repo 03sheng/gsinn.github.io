@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>GS INN Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="frontend style.css">
+  <link rel="stylesheet" href="footer/footer.css">
+  <script src="samplejs.js"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo" style="margin-right: 50px; height: 40px; width: 70px;"> <img src="Images/logo.png" alt=""> </a>
+    
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="#room" class="nav-link">Room</a> </li>
+          <li> <a href="login.html" class="nav-link">Book</a> </li>
+
+        </ul>
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+
+<!--START: KRIZIA-->
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>W E L C O  M E</h1>
+          <p class="shortdes"> GS Inn is a budget hotel located in Floridablanca, Pampanga, Philippines. It offers clean and comfortable accommodations for travelers on a budget. The hotel features a standard rooms, which are air-conditioned and equipped with cable TV, a private bathroom with shower, and free Wi-Fi access.</p>
+          <!--<button>More Info</button> FUNCTION-->
+          <br>
+        </div>
+      </div>
+      <div class="image">
+        <img src="Images/i19.jpg"><!--MAIN BACKGROUND-->
+      </div>
+    </div>
+  </section>
+<!--END: KRIZIA-->
+<div class="about" id="about">
+  <div class="container">
+    <div class="heading_top flex1">
+      <div class="heading">
+        <h2>About</h2>
+        <p >GS Inn is a great option for budget-conscious travelers seeking comfortable accommodations in Floridablanca, Pampanga.</p>
+        <div class="abt_img">
+          <img src="Images/i1.jpg" >
+          <img src="Images/i10.jpg" >
+        </div>
+        <br>
+        <p >Geraldine Sagad, a member of the Sagad family, founded the GS Inn in 2014, which is a family-run enterprise with offices in Valdez, Floridablanca Pampanga. Because there aren't many hotels in the area, the owner of this company decided to build a facility just for families and couples looking for a quiet place to unwind and stay. GS Inn is the most affordable priced private hotel in town with clean and top-notch services. Options include short-term stays and overnight stays depending on the needs of the client. </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--START: DEXTER-->
+<div class="room top" id="room">
+  <div class="container">
+    <div class="heading_top flex1">
+      <div class="heading">
+        <h2 >Rooms</h2>
+      </div>
+      <div class="button">
+          <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+               <div class="close-btn" onclick="togglePopup()">&times;</div>
+               <div class="avlRooms">
+                  <h1>Available Rooms</h1>
+                  <img src="">
+                  <img src="">
+                  <img src="">
+                  <ul>
+                    <li><a href="">Prices</a></li>
+                      <ul>
+                        <li>3 Hours</li>
+                        <li>4 Hours</li>
+                        <li>5 Hours</li>
+                        <li>6 Hours</li>
+                        <li>7 Hours</li>
+                        <li>8 Hours</li>
+                        <li>9 Hours</li>
+                        <li>10 Hours</li>
+                      </ul>
+                  </ul>
+                </div>
+               <!--LIST OF ROOMS AVAILABLE-->
+            </div>
+          </div>
+          <button class="btn1" onclick="togglePopup()">View All</button>
+      </div>
+    </div>
+
+    <div class="content grid">
+      <div class="box">
+        <div class="img">
+          <img src="Images/i14.jpg" alt="photo 1">
+        </div>
+        <!--<div class="text">
+          <div>
+              <tr>Prices: </tr>
+
+          </div> PRICES AND IMAGES-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END: DEXTER-->
+
+
+<!--START: SHANE-->
+<div class="footer footer">
+  <div class="col-1">
+      <h3>FOR CUSTOMERS</h3>
+      <a href="">Event Wall</a>
+      <a href="rules_regulations.html">Rules and Regulations</a>
+  </div>
+  <div class="col-2">
+      <h3>PAYMENT METHOD</h3>
+      <form>
+          <div style="margin-left: 5px;";>
+            <a href="https://www.gcash.com/" target="_blank">
+              <img src="Gcashlogo1.png" height="20" width="80">
+              </a>  
+          </div>
+      </form>
+  </div>
+  <div class="col-3">
+    <h3 id="contact">CONTACT US/ VISIT US</h3>
+      <ul>
+        <li>
+          <a href="https://goo.gl/maps/qumY3USt5CSeT3jH9" style="color: white;">Rodriguez Street, Valdez, Floridablanca, Pampanga (Street Going To Jaia Resort)</a>
+        </li>
+        <br> 
+        <li>Nearest Landmark: back of Galacy Event Center 2006 Floridablanca, Philippines</li>
+        <br>
+        <li>GSInn2015@gmail.com</li>
+        <br>
+        <li>09511719208 </li>
+        <br>
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=100008855861080" target="_black">
+            <img src="facebooklogo.png" height="40" width="100">
+          </a>
+        </li>
+      </ul>
+  </div>
+</div>
+<!--END: SHANE-->
+</body>
+</html>

@@ -1,0 +1,238 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Graphik Regular;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-image: url(Images/i12.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.head_container {
+  max-width: 80%;
+  margin: auto;
+}
+/*--------------header--------*/
+header {
+  position: fixed;
+  top: 0;
+  min-height: 65px;
+  z-index: 99;
+  background-color: #fff;
+  transition: 0.2s;
+  display: flex;
+  border-bottom: 1px solid #c2c2c2;
+  width: 100%;
+  justify-content: center;
+}
+
+
+.logo {
+  width: 100px;
+  height: 100px; 
+  border-radius: 4rem;
+  display: flex;
+
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1%;
+
+}
+
+.hambuger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #ff6f00fe;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul li {
+  margin-left: 3rem;
+  list-style-type: none; 
+}
+
+header ul li a {
+  font-family: Graphik Regular;
+  font-size: 14px;
+  font-weight: 500px;
+  color: #000000;
+  transition: 0.4s;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+header ul li a:hover {
+  border-bottom: 3px solid #ff6900;
+  color:#ff6900;
+}
+
+@media only screen and (max-width: 768px) {
+  header ul {
+    display: block;
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 20;
+  }
+
+  header ul.active {
+    left: 0%;
+  }
+
+  header ul li {
+    margin: 2.5rem 0;
+  }
+
+  header ul li a {
+    color: black;
+  }
+
+  .hambuger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hambuger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hambuger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hambuger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  padding: 25px 30px;
+  border-radius: 5px;
+  margin-top: 80px;
+
+}
+.container .title{
+  font-size: 24px;
+  font-weight: 400;
+  position: relative;
+  margin-top: 45px;
+  text-align: center;
+  border-bottom: 2px solid coral;
+}
+
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #ff6f00fe;
+}
+
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ 
+ form .button input {
+  height: 100%;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  background: linear-gradient(135deg, #ff6f00fe,#ff6f00fe);
+  margin-left: 175px
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #00bf26, #00ba2f);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
